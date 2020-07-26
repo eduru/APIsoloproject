@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const pool = require("./db");
+const catMe = require("cat-me");
 
 app.use(express.json());
 
@@ -66,4 +67,5 @@ app.delete("todos/:id", async (req, res) => {
 
 app.listen(3000, () => {
     console.log("listening...")
+    console.log(catMe("nyan"));
 })
